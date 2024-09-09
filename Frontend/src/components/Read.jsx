@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { CiTrash } from "react-icons/ci";
 
 import { FaRegEdit } from "react-icons/fa";
@@ -38,6 +38,7 @@ function Read() {
 	const fetchDataFromDb = async () => {
 		try {
 			const response = await fetch(API_URL);
+			console.log(API_URL)
 			if (!response.ok) {
 				throw new Error("Network response was not ok");
 			}
